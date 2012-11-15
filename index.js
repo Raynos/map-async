@@ -10,6 +10,10 @@ function map(list, iterator, context, callback) {
         context = this
     }
 
+    if (keys.length === 0) {
+        return callback(null, returnValue)
+    }
+
     for (var i = 0, len = keys.length; i < len; i++) {
         var key = keys[i]
             , value = list[key]
@@ -35,16 +39,16 @@ function map(list, iterator, context, callback) {
     }
 }
 
-function invokeIterator(iterator, done, context, value, key, list) {
+function invokeIterator(iterator, done, self, value, key, list) {
     var length = iterator.length
 
     if (length === 1) {
-        iterator.call(context, done)
+        iterator.call(self, done)
     } else if (length === 2) {
-        iterator.call(context, value, done)
+        iterator.call(self, value, done)
     } else if (length === 3) {
-        iterator.call(context, value, key, done)
+        iterator.call(self, value, key, done)
     } else {
-        iterator.call(context, value, key, list, done)
+        iterator.call(self, value, key, list, done)
     }
 }
