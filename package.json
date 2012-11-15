@@ -1,6 +1,6 @@
 {
   "name": "map-async",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Asynchronously map over a list",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
