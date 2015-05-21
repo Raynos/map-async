@@ -21,12 +21,7 @@
     "tap": "~0.3.1",
     "sinon": "~1.4.2"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/map-async/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "test": "tap --stderr --tap ./test"
   }
