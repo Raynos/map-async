@@ -11,7 +11,7 @@ map({
     foo: "bar"
     , baz: "boz"
 }, function iterator(value, key, cb) {
-    return value + value
+    cb(null, value + value)
 }, function finish(err, result) {
     /* ... */
 })
